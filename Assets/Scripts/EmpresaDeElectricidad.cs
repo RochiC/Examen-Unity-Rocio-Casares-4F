@@ -63,7 +63,7 @@ public class EmpresaDeElectricidad : MonoBehaviour
             {
                 a++;
             }
-            b = a / domicilios.Length;
+            b
         }
         Debug.Log(a+" "+b);
     }
