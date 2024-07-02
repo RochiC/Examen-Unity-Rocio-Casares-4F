@@ -5,7 +5,7 @@ using UnityEngine;
 public class EmpresaDeElectricidad : MonoBehaviour
 {
     public Domicilio[] domicilios;
-
+    float porcentaje;
     int a = 0, b = 0;
     // Start is called before the first frame update
     void Start()
@@ -56,15 +56,17 @@ public class EmpresaDeElectricidad : MonoBehaviour
     void MostrarInfoEnConsola()
     {
         //cuántos domicilios tienen su servicio eléctrico activo
-        // porcentaje de domicilios con servicio eléctrico activo
-        for (int i = 0; i < domicilios.Length; i++)
+        int cantActivos = 0;
+        for (int i = 0; i < domicilios.Length; i ++)
         {
             if (domicilios[i].servicioElectricoActivo)
             {
-                a++;
+                cantActivos++;
             }
-            b
         }
-        Debug.Log(a+" "+b);
+        Debug.Log("Cantidad activos = " + cantActivos);
+        // porcentaje de domicilios con servicio eléctrico activo
+        float porcentaje = domicilios.Length / cantActivos * 1.0f * 100;
+        Debug.Log("Porcentaje activos = " + porcentaje);
     }
 }
